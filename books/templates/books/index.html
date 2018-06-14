@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Books</h3>
+
+{% for book in books %}
+    <img src='{{MEDIA_URL}}{{ book.image }}'/>
+    {{ book.name }} - {{ book.author }} 
+    <br>
+{% endfor %}
+
+{% endblock %}
